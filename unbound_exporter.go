@@ -254,6 +254,18 @@ var (
 			[]string{"thread"},
 			"^thread([0-9]+)\\.requestlist\\.overwritten$"),
 		newUnboundMetric(
+			"request_list_avg",
+			"Average requests in request list on new recursive query.",
+			prometheus.GaugeValue,
+			nil,
+			"total\\.requestlist\\.avg"),
+		newUnboundMetric(
+			"request_list_max",
+			"Maximum size attained by recursive request list.",
+			prometheus.CounterValue,
+			nil,
+			"total\\.requestlist\\.max"),
+		newUnboundMetric(
 			"recursive_replies_total",
 			"Total number of replies sent to queries that needed recursive processing.",
 			prometheus.CounterValue,
