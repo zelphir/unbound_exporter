@@ -258,13 +258,13 @@ var (
 			"Average requests in request list on new recursive query.",
 			prometheus.GaugeValue,
 			nil,
-			"total\\.requestlist\\.avg"),
+			"^total\\.requestlist\\.avg$"),
 		newUnboundMetric(
 			"request_list_max",
 			"Maximum size attained by recursive request list.",
 			prometheus.CounterValue,
 			nil,
-			"total\\.requestlist\\.max"),
+			"^total\\.requestlist\\.max$"),
 		newUnboundMetric(
 			"recursive_replies_total",
 			"Total number of replies sent to queries that needed recursive processing.",
