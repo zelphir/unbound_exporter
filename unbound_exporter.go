@@ -361,6 +361,12 @@ var (
 			prometheus.CounterValue,
 			nil,
 			"^infra\\.cache\\.count$"),
+		newUnboundMetric(
+			"key_cache_count",
+			"TNumber of items in the key cache",
+			prometheus.GaugeValue,
+			nil,
+			"^key\\.cache\\.count$"),
 	}
 )
 
